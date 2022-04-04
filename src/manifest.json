@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "html/popup.html",
+    "default_title": "CptPrice"
+  },
+  "background": {
+    "service_worker": "html/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.komplett.no/*"],
+      "css": ["css/css_komplett.css"],
+      "js": ["js/script_komplett.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["js/*"],
+      "matches": ["https://*.komplett.no/*"]
+    }
+  ],
+  "name": "CptPrice",
+  "version": "0.0.1",
+  "description": "Embedded price matching",
+  "author": "VOL"
+}
